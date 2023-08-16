@@ -1,18 +1,19 @@
 .container {
+  display: flex;
   height: 600px;
-  background: #fff;
+  background: var(--white);
   padding: 20px;
   border-radius: 10px;
-  margin: 20px;
+  margin: 24px;
 }
 
-@media screen and (min-width: 755px) {
+@media screen and (min-width: 1168px) {
   .container {
     position: relative;
   }
 }
 
-@media screen and (max-width: 755px) {
+@media screen and (max-width: 1168px) {
   .container {
     width: 100%;
   }
