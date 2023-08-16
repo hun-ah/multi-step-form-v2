@@ -1,12 +1,17 @@
 .container {
   height: 100%;
   width: 280px;
-  background: blue;
+  background: url(/src/assets/bg-sidebar-desktop.svg);
+  background-size: cover;
+  background-position: center;
   border-radius: 10px;
 }
 
 @media screen and (max-width: 1168px) {
   .container {
+    background: url(/src/assets/bg-sidebar-mobile.svg);
+    background-size: cover;
+    background-position: center;
     top: 0;
     left: 0;
     width: 100%;
