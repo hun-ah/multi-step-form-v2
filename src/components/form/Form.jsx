@@ -11,7 +11,7 @@ const Form = () => {
   return (
     <div className={styles.container}>
       <form className={styles.form}>
-        {index === 1 && <PersonalInfo />}
+        {index == 1 && <PersonalInfo />}
         {index == 2 && <SelectPlan />}
         {index == 3 && <AddOns />}
         {index == 4 && <FinishingUp />}
