@@ -1,0 +1,21 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 800px;
+  padding: 20px calc(80px - 20px) 20px 80px;
+}
+
+.form {
+  border: 1px solid black;
+  height: 100%;
+  width: 100%;
+}
+
+@media screen and (max-width: 1168px) {
+  .container {
+    width: 100%;
+    padding: 24px;
+  }
+}
