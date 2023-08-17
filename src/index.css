@@ -27,3 +27,15 @@ body {
   align-items: center;
   min-height: 100vh;
 }
+
+h1 {
+  font-size: 40px !important;
+  font-weight: 500 !important;
+  color: var(--marine-blue);
+}
+
+@media screen and (max-width: 1168px) {
+  h1 {
+    font-size: 30px !important;
+  }
+}
