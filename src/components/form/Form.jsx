@@ -1,5 +1,4 @@
 import styles from './form.module.css';
-import { useState } from 'react';
 import PersonalInfo from '../personalInfo/PersonalInfo';
 import SelectPlan from '../selectPlan/SelectPlan';
 import AddOns from '../addOns/AddOns.jsx';
@@ -7,8 +6,7 @@ import FinishingUp from '../finishingUp/FinishingUp.jsx';
 import ThankYou from '../thankYou/ThankYou.jsx';
 import Button from '../button/Button';
 
-const Form = () => {
-  const [index, setIndex] = useState(1);
+const Form = ({ index, setIndex }) => {
   const nextStep = () => {
     setIndex((prevIndex) => {
       if (prevIndex === 5) {
