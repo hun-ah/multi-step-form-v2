@@ -1,11 +1,10 @@
-import styles from './addons.module.css';
+// import styles from './addons.module.css';
+import OptionLayout from '../optionLayout/OptionLayout.jsx';
 
 const AddOns = () => {
-  return (
-    <div className={styles.container}>
-      <h1>Add Ons</h1>
-    </div>
-  );
+  const heading = 'Pick add-ons';
+  const subheading = 'Add-ons help enhance your gaming experience';
+  return <OptionLayout heading={heading} subheading={subheading} />;
 };
 
 export default AddOns;
