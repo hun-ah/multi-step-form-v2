@@ -4,8 +4,8 @@ const OptionLayout = ({ heading, subheading }) => {
   return (
     <div className={styles.container}>
       <div className={styles.headingContainer}>
-        <h1>{heading}</h1>
-        <p>{subheading}</p>
+        <h1 className={styles.heading}>{heading}</h1>
+        <p className={styles.subheading}>{subheading}</p>
       </div>
       <div></div>
     </div>
