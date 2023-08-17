@@ -1,11 +1,12 @@
-import styles from './personalinfo.module.css';
+// import styles from './personalinfo.module.css';
+import OptionLayout from '../optionLayout/OptionLayout';
 
 const PersonalInfo = () => {
-  return (
-    <div className={styles.container}>
-      <h1>Personal Info</h1>
-    </div>
-  );
+  const heading = 'Personal info';
+  const subheading =
+    'Please provide your name, email address and phone number.';
+
+  return <OptionLayout heading={heading} subheading={subheading} />;
 };
 
 export default PersonalInfo;
