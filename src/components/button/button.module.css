@@ -1,0 +1,27 @@
+.button {
+  border: none;
+  cursor: pointer;
+  color: var(--white);
+  font-weight: 500;
+  font-size: 14px;
+  background: var(--marine-blue);
+  padding: 14px 26px;
+  border-radius: 6px;
+  transition: 0.2s ease;
+}
+
+.button:hover {
+  background: hsl(216, 75%, 32%);
+}
+
+.hide {
+  border: none;
+  background: none;
+  color: var(--white);
+}
+
+@media screen and (max-width: 1168px) {
+  .button {
+    margin: 20px;
+  }
+}
