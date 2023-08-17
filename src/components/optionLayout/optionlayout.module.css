@@ -1,0 +1,21 @@
+h1 {
+  font-size: 40px;
+  font-weight: 500;
+  color: var(--marine-blue);
+}
+
+p {
+  color: var(--cool-gray);
+}
+
+.headingContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+@media screen and (max-width: 1168px) {
+  h1 {
+    font-size: 30px;
+  }
+}
