@@ -6,6 +6,13 @@
 
 .subheading {
   color: var(--cool-gray);
+  line-height: 1.5;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
 }
 
 .headingContainer {
@@ -14,8 +21,21 @@
   gap: 20px;
 }
 
+.inputContainer {
+  border: 1px solid black;
+  height: 200px;
+}
+
 @media screen and (max-width: 1168px) {
-  h1 {
+  .heading {
     font-size: 30px;
+  }
+
+  .container {
+    gap: 20px;
+  }
+
+  .headingContainer {
+    gap: 10px;
   }
 }
