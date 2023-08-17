@@ -1,6 +1,5 @@
 .container {
   display: flex;
-  height: 600px;
   background: var(--white);
   padding: 20px;
   border-radius: 10px;
@@ -11,12 +10,12 @@
 @media screen and (min-width: 1168px) {
   .container {
     position: relative;
+    height: 600px;
   }
 }
 
 @media screen and (max-width: 1168px) {
   .container {
-    height: 500px;
     margin-bottom: 110px;
   }
 }
