@@ -27,6 +27,14 @@
   cursor: pointer;
 }
 
+.confirm {
+  background: var(--purple-blue);
+}
+
+.confirm:hover {
+  background: rgb(124, 124, 255);
+}
+
 @media screen and (max-width: 1168px) {
   .button {
     margin: 20px;
