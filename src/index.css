@@ -34,6 +34,10 @@ h1 {
   color: var(--marine-blue);
 }
 
+p {
+  color: var(--cool-gray) !important;
+}
+
 @media screen and (max-width: 1168px) {
   h1 {
     font-size: 30px !important;
