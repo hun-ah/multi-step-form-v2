@@ -19,3 +19,9 @@
     margin-bottom: 110px;
   }
 }
+
+@media (min-width: 500px) and (max-width: 1168px) {
+  .container {
+    width: 460px;
+  }
+}
