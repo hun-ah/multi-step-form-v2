@@ -1,10 +1,10 @@
-h1 {
+.heading {
   font-size: 40px;
   font-weight: 500;
   color: var(--marine-blue);
 }
 
-p {
+.subheading {
   color: var(--cool-gray);
 }
 
