@@ -7,6 +7,13 @@
   border-radius: 10px;
 }
 
+.stepContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin: 36px;
+}
+
 @media screen and (max-width: 1168px) {
   .container {
     background: url(/src/assets/bg-sidebar-mobile.svg);
@@ -19,5 +26,11 @@
     position: absolute;
     z-index: -1;
     border-radius: 0px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .stepContainer {
+    flex-direction: row;
   }
 }
