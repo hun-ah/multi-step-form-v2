@@ -15,13 +15,25 @@
 }
 
 .hide {
-  border: none;
+  z-index: -1;
+}
+
+.back {
   background: none;
-  color: var(--white);
+  color: var(--cool-gray);
+  border: none;
+  font-weight: 500;
+  font-size: 14px;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 1168px) {
   .button {
     margin: 20px;
+  }
+
+  .hide {
+    position: relative;
+    left: -80px;
   }
 }
