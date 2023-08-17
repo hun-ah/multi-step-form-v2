@@ -36,7 +36,8 @@
 }
 
 @media screen and (max-width: 1168px) {
-  .button {
+  .button,
+  .back {
     margin: 20px;
   }
 
