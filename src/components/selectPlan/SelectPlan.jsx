@@ -1,11 +1,10 @@
-import styles from './selectplan.module.css';
+// import styles from './selectplan.module.css';
+import OptionLayout from '../optionLayout/OptionLayout.jsx';
 
 const SelectPlan = () => {
-  return (
-    <div className={styles.container}>
-      <h1>Select Plan</h1>
-    </div>
-  );
+  const heading = 'Select your plan';
+  const subheading = 'You have the option of monthly or yearly billing.';
+  return <OptionLayout heading={heading} subheading={subheading} />;
 };
 
 export default SelectPlan;
