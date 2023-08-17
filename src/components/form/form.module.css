@@ -5,7 +5,7 @@
   align-items: center;
   height: 100%;
   width: 800px;
-  padding: 20px calc(80px - 20px) 20px 80px;
+  padding: 20px calc(110px - 20px) 10px 110px;
 }
 
 .form {
@@ -16,7 +16,8 @@
 }
 
 .buttonContainer {
-  border: 1px solid black;
+  display: flex;
+  justify-content: space-between;
   width: 100%;
 }
 
@@ -27,9 +28,10 @@
   }
 
   .buttonContainer {
-    position: absolute;
+    position: fixed;
     bottom: 0;
     left: 0;
     background: var(--white);
+    box-shadow: 0px -5px 5px rgba(0, 0, 0, 0.01);
   }
 }
