@@ -1,11 +1,11 @@
-import styles from './finishingup.module.css';
+// import styles from './finishingup.module.css';
+import OptionLayout from '../optionLayout/OptionLayout.jsx';
 
 const FinishingUp = () => {
-  return (
-    <div className={styles.container}>
-      <h1>Finshing Up</h1>
-    </div>
-  );
+  const heading = 'Finishing up';
+  const subheading = 'Double-check everything looks OK before confirming.';
+
+  return <OptionLayout heading={heading} subheading={subheading} />;
 };
 
 export default FinishingUp;
