@@ -5,7 +5,7 @@ const OptionLayout = ({ heading, subheading }) => {
     <div className={styles.container}>
       <div className={styles.headingContainer}>
         <h1 className={styles.heading}>{heading}</h1>
-        <p className={styles.subheading}>{subheading}</p>
+        <h2 className={styles.subheading}>{subheading}</h2>
       </div>
       <div className={styles.inputContainer}></div>
     </div>
