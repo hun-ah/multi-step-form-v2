@@ -1,0 +1,41 @@
+.container {
+  display: flex;
+  gap: 20px;
+}
+
+.circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--white);
+  color: var(--white);
+  font-weight: 700;
+  font-size: 18px;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+}
+
+.selected {
+  border: none;
+  color: var(--marine-blue);
+  background: var(--magnolia);
+}
+
+.textContainer {
+  width: 110px;
+  display: flex;
+  flex-direction: column;
+  line-height: 1.4;
+  color: var(--white);
+}
+
+.text {
+  font-weight: 700;
+}
+
+@media screen and (max-width: 1168px) {
+  .textContainer {
+    display: none;
+  }
+}
