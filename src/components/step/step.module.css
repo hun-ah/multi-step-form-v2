@@ -19,7 +19,7 @@
 .selected {
   border: none;
   color: var(--marine-blue);
-  background: var(--magnolia);
+  background: var(--light-blue);
 }
 
 .textContainer {
