@@ -1,6 +1,7 @@
 import styles from './optionlayout.module.css';
-import Input from '../input/Input';
-import TogglePlan from '../togglePlan/TogglePlan.jsx';
+import TogglePlan from '../togglePlan/TogglePlan';
+import TextInput from '../inputs/textInput/TextInput';
+import RadioInput from '../inputs/radioInput/RadioInput';
 
 const OptionLayout = ({ heading, subheading, inputs, component }) => {
   let inputContainerStyle;
@@ -9,6 +10,24 @@ const OptionLayout = ({ heading, subheading, inputs, component }) => {
   } else if (component == 'select plan') {
     inputContainerStyle = `${styles.selectPlanContainer}`;
   }
+
+  // input lists
+  const personalInfoInputs =
+    inputs &&
+    inputs.map((input) => (
+      <TextInput
+        key={Math.random()}
+        label={input.label}
+        placeholder={input.placeholder}
+        id={input.id}
+      />
+    ));
+
+  const selectPlanInputs =
+    inputs &&
+    inputs.map((input) => (
+      <RadioInput key={Math.random()} label={input.label} id={input.id} />
+    ));
 
   return (
     <div className={styles.container}>
@@ -21,17 +40,8 @@ const OptionLayout = ({ heading, subheading, inputs, component }) => {
           inputContainerStyle ? inputContainerStyle : styles.inputContainer
         }
       >
-        {inputs &&
-          inputs.map((input) => (
-            <Input
-              key={Math.random()}
-              type={input.type}
-              label={input.label}
-              placeholder={input.placeholder}
-              id={input.id}
-              component={component}
-            />
-          ))}
+        {inputs && component == 'personal info' && personalInfoInputs}
+        {inputs && component == 'select plan' && selectPlanInputs}
       </div>
       {component == 'select plan' && <TogglePlan />}
     </div>
