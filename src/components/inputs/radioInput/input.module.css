@@ -1,0 +1,8 @@
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
+  border: 1px solid var(--light-gray);
+}
