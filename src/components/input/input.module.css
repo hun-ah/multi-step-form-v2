@@ -1,0 +1,61 @@
+.personalInfoContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.personalInfoLabel {
+  color: var(--marine-blue);
+  font-size: 14px;
+}
+
+.personalInfoInput {
+  border: 1px solid var(--light-gray);
+  border-radius: 10px;
+  padding: 16px;
+}
+
+.personalInfoInput::placeholder {
+  color: var(--cool-gray);
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.personalInfoInput:focus {
+  outline: none;
+  border: 1px solid var(--purple-blue);
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+  box-shadow: 0 0 0px 1000px #ffffff inset !important;
+  -webkit-box-shadow: 0 0 0px 1000px #ffffff inset !important;
+  -webkit-text-fill-color: var(--marine-blue) !important;
+}
+
+input {
+  color: var(--marine-blue);
+  font-weight: 700 !important;
+}
+
+.selectPlanContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.selectPlanLabel {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid rgb(221 219 223);
+  border-radius: 5px;
+  padding: 14px;
+  height: 160px;
+  width: 160px;
+  cursor: pointer;
+}
+
+.selectPlanInput {
+  appearance: none;
+}
