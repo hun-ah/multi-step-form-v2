@@ -1,16 +1,47 @@
 .container {
   display: flex;
   flex-direction: column;
+  justify-content: space-evenly;
 }
 
-.label {
+.labelContainer {
   border: 1px solid var(--light-gray);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   border-radius: 5px;
-  padding: 14px;
+  padding: 18px;
   height: 160px;
   width: 160px;
   cursor: pointer;
+}
+
+.label {
+  color: var(--marine-blue);
+  font-weight: 500;
+}
+
+.input {
+  appearance: none;
+  position: absolute;
+}
+
+.planPrice {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.price {
+  color: var(--cool-gray);
+}
+
+@media screen and (max-width: 1168px) {
+  .labelContainer {
+    width: 100%;
+    flex-direction: row;
+    height: fit-content;
+    justify-content: flex-start;
+    gap: 18px;
+  }
 }
