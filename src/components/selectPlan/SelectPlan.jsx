@@ -1,4 +1,3 @@
-// import styles from './selectplan.module.css';
 import OptionLayout from '../optionLayout/OptionLayout.jsx';
 
 const SelectPlan = () => {
@@ -13,16 +12,19 @@ const SelectPlan = () => {
       type: 'radio',
       label: 'Arcade',
       id: 'arcade',
+      price: '$9/mo',
     },
     {
       type: 'radio',
       label: 'Advanced',
       id: 'advanced',
+      price: '$12/mo',
     },
     {
       type: 'radio',
       label: 'Pro',
       id: 'pro',
+      price: '$15/mo',
     },
   ];
   return (
