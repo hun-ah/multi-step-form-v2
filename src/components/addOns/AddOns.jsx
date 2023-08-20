@@ -1,4 +1,3 @@
-// import styles from './addons.module.css';
 import OptionLayout from '../optionLayout/OptionLayout.jsx';
 
 const AddOns = () => {
@@ -10,25 +9,27 @@ const AddOns = () => {
     {
       type: 'checkbox',
       label: 'Name',
-      placeholder: 'e.g. Stephen King',
       id: 'name',
     },
     {
       type: 'checkbox',
       label: 'Email Address',
-      placeholder: 'e.g. stephenking@lorem.com',
       id: 'email',
     },
     {
       type: 'checkbox',
       label: 'Phone Number',
-      placeholder: '123 567 8910',
       id: 'phone',
     },
   ];
 
   return (
-    <OptionLayout heading={heading} subheading={subheading} inputs={inputs} />
+    <OptionLayout
+      heading={heading}
+      subheading={subheading}
+      inputs={inputs}
+      component='add ons'
+    />
   );
 };
 
