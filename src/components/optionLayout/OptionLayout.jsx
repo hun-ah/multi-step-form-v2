@@ -2,6 +2,7 @@ import styles from './optionlayout.module.css';
 import TogglePlan from '../togglePlan/TogglePlan';
 import TextInput from '../inputs/textInput/TextInput';
 import RadioInput from '../inputs/radioInput/RadioInput';
+import CheckInput from '../inputs/checkinput/CheckInput';
 
 const OptionLayout = ({ heading, subheading, inputs, component }) => {
   let inputContainerStyle;
@@ -26,7 +27,18 @@ const OptionLayout = ({ heading, subheading, inputs, component }) => {
   const selectPlanInputs =
     inputs &&
     inputs.map((input) => (
-      <RadioInput key={Math.random()} label={input.label} id={input.id} />
+      <RadioInput
+        key={Math.random()}
+        label={input.label}
+        id={input.id}
+        price={input.price}
+      />
+    ));
+
+  const addOnInputs =
+    inputs &&
+    inputs.map((input) => (
+      <CheckInput key={Math.random()} label={input.label} id={input.id} />
     ));
 
   return (
@@ -42,6 +54,7 @@ const OptionLayout = ({ heading, subheading, inputs, component }) => {
       >
         {inputs && component == 'personal info' && personalInfoInputs}
         {inputs && component == 'select plan' && selectPlanInputs}
+        {inputs && component == 'add ons' && addOnInputs}
       </div>
       {component == 'select plan' && <TogglePlan />}
     </div>
