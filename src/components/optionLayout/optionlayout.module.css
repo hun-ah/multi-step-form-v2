@@ -48,4 +48,9 @@
   .headingContainer {
     gap: 10px;
   }
+
+  .selectPlanContainer {
+    flex-direction: column;
+    gap: 14px;
+  }
 }
