@@ -10,6 +10,8 @@ const OptionLayout = ({ heading, subheading, inputs, component }) => {
     inputContainerStyle = `${styles.personalInfoContainer}`;
   } else if (component == 'select plan') {
     inputContainerStyle = `${styles.selectPlanContainer}`;
+  } else if (component == 'add ons') {
+    inputContainerStyle = `${styles.addOnContainer}`;
   }
 
   // input lists
@@ -31,14 +33,22 @@ const OptionLayout = ({ heading, subheading, inputs, component }) => {
         key={Math.random()}
         label={input.label}
         id={input.id}
-        price={input.price}
+        monthlyPrice={input.monthlyPrice}
+        yearlyPrice={input.yearlyPrice}
       />
     ));
 
   const addOnInputs =
     inputs &&
     inputs.map((input) => (
-      <CheckInput key={Math.random()} label={input.label} id={input.id} />
+      <CheckInput
+        key={Math.random()}
+        label={input.label}
+        id={input.id}
+        text={input.text}
+        monthlyPrice={input.monthlyPrice}
+        yearlyPrice={input.yearlyPrice}
+      />
     ));
 
   return (
@@ -49,7 +59,7 @@ const OptionLayout = ({ heading, subheading, inputs, component }) => {
       </div>
       <div
         className={
-          inputContainerStyle ? inputContainerStyle : styles.inputContainer
+          inputContainerStyle ? inputContainerStyle : styles.stepContainer
         }
       >
         {inputs && component == 'personal info' && personalInfoInputs}
