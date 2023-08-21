@@ -12,19 +12,22 @@ const SelectPlan = () => {
       type: 'radio',
       label: 'Arcade',
       id: 'arcade',
-      price: '$9/mo',
+      monthlyPrice: 9,
+      yearlyPrice: 90,
     },
     {
       type: 'radio',
       label: 'Advanced',
       id: 'advanced',
-      price: '$12/mo',
+      monthlyPrice: 12,
+      yearlyPrice: 120,
     },
     {
       type: 'radio',
       label: 'Pro',
       id: 'pro',
-      price: '$15/mo',
+      monthlyPrice: 15,
+      yearlyPrice: 150,
     },
   ];
   return (
