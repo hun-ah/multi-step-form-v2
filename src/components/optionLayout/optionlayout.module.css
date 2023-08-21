@@ -21,7 +21,7 @@
   gap: 14px;
 }
 
-.inputContainer {
+.stepContainer {
   height: 200px;
 }
 
@@ -34,6 +34,12 @@
 .selectPlanContainer {
   display: flex;
   justify-content: space-between;
+}
+
+.addOnContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
 @media screen and (max-width: 1168px) {
