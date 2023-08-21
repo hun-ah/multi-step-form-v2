@@ -1,4 +1,3 @@
-// import styles from './personalinfo.module.css';
 import OptionLayout from '../optionLayout/OptionLayout';
 
 const PersonalInfo = () => {
