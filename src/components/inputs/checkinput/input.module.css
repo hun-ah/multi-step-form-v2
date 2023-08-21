@@ -1,0 +1,38 @@
+.label {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--light-gray);
+  border-radius: 5px;
+  padding: 18px;
+  gap: 20px;
+}
+
+.label > span:last-child {
+  margin-left: auto;
+  color: var(--purple-blue);
+  font-size: 14px;
+}
+
+.addon {
+  color: var(--marine-blue);
+  font-weight: 500;
+}
+
+.description {
+  color: var(--cool-gray);
+  font-size: 14px;
+}
+
+.textContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.input {
+  cursor: pointer;
+  accent-color: var(--purple-blue);
+  height: 18px;
+  width: 18px;
+}
