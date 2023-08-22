@@ -1,6 +1,10 @@
 import styles from './input.module.css';
+import { useContext } from 'react';
+import { InputContext } from '../../../contexts/InputContext';
 
 const CheckInput = ({ id, label, text, monthlyPrice, yearlyPrice }) => {
+  const { formInputs, handleInputChange } = useContext(InputContext);
+
   return (
     <div className={styles.container}>
       <label htmlFor={id} className={styles.label}>
@@ -9,7 +13,9 @@ const CheckInput = ({ id, label, text, monthlyPrice, yearlyPrice }) => {
           <span className={styles.addon}>{label}</span>
           <span className={styles.description}>{text}</span>
         </div>
-        <span>+${monthlyPrice}/mo</span>
+        <span>
+          +${formInputs.monthlyPayment ? monthlyPrice : yearlyPrice}/mo
+        </span>
       </label>
     </div>
   );
