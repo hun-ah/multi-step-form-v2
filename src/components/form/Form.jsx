@@ -1,24 +1,16 @@
 import styles from './form.module.css';
-import { useState } from 'react';
 import PersonalInfo from '../personalInfo/PersonalInfo';
 import SelectPlan from '../selectPlan/SelectPlan';
 import AddOns from '../addOns/AddOns.jsx';
 import FinishingUp from '../finishingUp/FinishingUp.jsx';
 import ThankYou from '../thankYou/ThankYou.jsx';
 import Button from '../button/Button';
+import { useContext } from 'react';
+import { InputContext } from '../../contexts/InputContext';
 
 const Form = ({ index, setIndex }) => {
-  const [formInputs, setFormInputs] = useState({
-    name: '',
-    emailAddress: '',
-    phoneNumber: '',
-    planType: 'arcade',
-    monthlyPayment: true,
-    onlineService: false,
-    largerStorage: false,
-    customizeableProfile: false,
-  });
-
+  const { formInputs } = useContext(InputContext);
+  console.log(formInputs);
   const nextStep = () => {
     setIndex((prevIndex) => {
       if (prevIndex === 5) {
