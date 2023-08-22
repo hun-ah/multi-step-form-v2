@@ -34,6 +34,8 @@ const OptionLayout = ({ heading, subheading, inputs, component }) => {
         key={input.id}
         label={input.label}
         id={input.id}
+        name={input.name}
+        value={input.value}
         monthlyPrice={input.monthlyPrice}
         yearlyPrice={input.yearlyPrice}
       />
