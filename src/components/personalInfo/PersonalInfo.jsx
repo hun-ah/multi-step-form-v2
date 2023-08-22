@@ -14,18 +14,21 @@ const PersonalInfo = () => {
       label: 'Name',
       placeholder: 'e.g. Stephen King',
       id: 'name',
+      name: 'name',
     },
     {
       type: 'text',
       label: 'Email Address',
       placeholder: 'e.g. stephenking@lorem.com',
       id: 'email',
+      name: 'emailAddress',
     },
     {
       type: 'text',
       label: 'Phone Number',
       placeholder: '123 567 8910',
       id: 'phone',
+      name: 'phoneNumber',
     },
   ];
 
