@@ -24,6 +24,11 @@ body {
   background: var(--magnolia);
   display: flex;
   justify-content: center;
-  align-items: center;
   min-height: 100vh;
+}
+
+@media (min-width: 1168px) {
+  body {
+    align-items: center;
+  }
 }
