@@ -7,6 +7,7 @@ import { InputContext } from '../../../contexts/InputContext';
 
 const RadioInput = ({ label, id, name, value, monthlyPrice, yearlyPrice }) => {
   const { formInputs, handleInputChange } = useContext(InputContext);
+
   const labelStyle =
     formInputs.planType == value
       ? `${styles.labelContainer} ${styles.selected}`
