@@ -29,11 +29,22 @@
 .planPrice {
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 8px;
 }
 
 .price {
   color: var(--cool-gray);
+  font-size: 14px;
+}
+
+.free {
+  color: var(--marine-blue);
+  font-size: 14px;
+}
+
+.selected {
+  border: 1px solid var(--purple-blue);
+  background: var(--magnolia);
 }
 
 @media screen and (max-width: 1168px) {
