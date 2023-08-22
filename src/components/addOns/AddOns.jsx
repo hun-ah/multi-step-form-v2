@@ -11,26 +11,29 @@ const AddOns = () => {
     {
       type: 'checkbox',
       label: 'Online service',
+      name: 'onlineService',
       text: 'Access to multiplayer games',
       monthlyPrice: 1,
       yearlyPrice: 10,
-      id: 'name',
+      id: 'service',
     },
     {
       type: 'checkbox',
       label: 'Larger storage',
+      name: 'largerStorage',
       text: 'Extra 1TB of cloud save',
       monthlyPrice: 2,
       yearlyPrice: 20,
-      id: 'email',
+      id: 'storage',
     },
     {
       type: 'checkbox',
       label: 'Customizable profile',
+      name: 'customizeableProfile',
       text: 'Custom theme on your profile',
       monthlyPrice: 2,
       yearlyPrice: 20,
-      id: 'phone',
+      id: 'profile',
     },
   ];
 
