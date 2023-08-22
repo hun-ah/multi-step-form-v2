@@ -19,10 +19,11 @@ const OptionLayout = ({ heading, subheading, inputs, component }) => {
     inputs &&
     inputs.map((input) => (
       <TextInput
-        key={Math.random()}
+        key={input.id}
         label={input.label}
         placeholder={input.placeholder}
         id={input.id}
+        name={input.name}
       />
     ));
 
@@ -30,7 +31,7 @@ const OptionLayout = ({ heading, subheading, inputs, component }) => {
     inputs &&
     inputs.map((input) => (
       <RadioInput
-        key={Math.random()}
+        key={input.id}
         label={input.label}
         id={input.id}
         monthlyPrice={input.monthlyPrice}
@@ -42,7 +43,7 @@ const OptionLayout = ({ heading, subheading, inputs, component }) => {
     inputs &&
     inputs.map((input) => (
       <CheckInput
-        key={Math.random()}
+        key={input.id}
         label={input.label}
         id={input.id}
         text={input.text}
