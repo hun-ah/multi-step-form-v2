@@ -10,7 +10,7 @@ import { InputContext } from '../../contexts/InputContext';
 
 const Form = ({ index, setIndex }) => {
   const { formInputs } = useContext(InputContext);
-  console.log(formInputs);
+
   const nextStep = () => {
     setIndex((prevIndex) => {
       if (prevIndex === 5) {
