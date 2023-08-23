@@ -55,6 +55,22 @@ const OptionLayout = ({ heading, subheading, inputs, component }) => {
       />
     ));
 
+  // which inputs to show
+  let showInput;
+  switch (component) {
+    case 'personal info':
+      showInput = personalInfoInputs;
+      break;
+    case 'select plan':
+      showInput = selectPlanInputs;
+      break;
+    case 'add ons':
+      showInput = addOnInputs;
+      break;
+    default:
+      showInput = null;
+  }
+
   return (
     <div className={styles.container}>
       <div className={styles.headingContainer}>
@@ -66,9 +82,7 @@ const OptionLayout = ({ heading, subheading, inputs, component }) => {
           inputContainerStyle ? inputContainerStyle : styles.stepContainer
         }
       >
-        {inputs && component == 'personal info' && personalInfoInputs}
-        {inputs && component == 'select plan' && selectPlanInputs}
-        {inputs && component == 'add ons' && addOnInputs}
+        {inputs && showInput}
       </div>
       {component == 'select plan' && <TogglePlan />}
     </div>
