@@ -42,6 +42,11 @@
   gap: 16px;
 }
 
+.finishingUpContainer {
+  display: flex;
+  flex-direction: column;
+}
+
 @media screen and (max-width: 1168px) {
   .heading {
     font-size: 30px;
