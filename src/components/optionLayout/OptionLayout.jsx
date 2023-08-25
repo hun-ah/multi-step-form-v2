@@ -1,5 +1,6 @@
 import styles from './optionlayout.module.css';
 import TogglePlan from '../togglePlan/TogglePlan';
+import DisplayCost from '../displayCost/DisplayCost';
 import TextInput from '../inputs/textInput/TextInput';
 import RadioInput from '../inputs/radioInput/RadioInput';
 import CheckInput from '../inputs/checkinput/CheckInput';
@@ -12,6 +13,8 @@ const OptionLayout = ({ heading, subheading, inputs, component }) => {
     inputContainerStyle = `${styles.selectPlanContainer}`;
   } else if (component == 'add ons') {
     inputContainerStyle = `${styles.addOnContainer}`;
+  } else if (component == 'finishing up') {
+    inputContainerStyle = `${styles.finishingUpContainer}`;
   }
 
   // input lists
@@ -83,6 +86,9 @@ const OptionLayout = ({ heading, subheading, inputs, component }) => {
         }
       >
         {inputs && showInput}
+        {component == 'finishing up' && (
+          <DisplayCost selectPlanInputs={selectPlanInputs} />
+        )}
       </div>
       {component == 'select plan' && <TogglePlan />}
     </div>
