@@ -1,0 +1,14 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.text {
+  color: var(--cool-gray);
+  font-size: 14px;
+}
+
+.price {
+  font-size: 14px;
+  font-weight: 500;
+}
