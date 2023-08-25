@@ -25,7 +25,8 @@ const CheckInput = ({ id, label, text, name, monthlyPrice, yearlyPrice }) => {
           <span className={styles.description}>{text}</span>
         </div>
         <span>
-          +${formInputs.monthlyPayment ? monthlyPrice : yearlyPrice}/mo
+          +${formInputs.monthlyPayment ? monthlyPrice : yearlyPrice}/
+          {formInputs.monthlyPayment ? 'mo' : 'yr'}
         </span>
       </label>
     </div>
