@@ -22,7 +22,8 @@ const RadioInput = ({ label, id, name, value, monthlyPrice, yearlyPrice }) => {
         <div className={styles.planPrice}>
           <span className={styles.label}>{label}</span>
           <span className={styles.price}>
-            ${formInputs.monthlyPayment ? monthlyPrice : yearlyPrice}/yr
+            ${formInputs.monthlyPayment ? monthlyPrice : yearlyPrice}/
+            {formInputs.monthlyPayment ? 'mo' : 'yr'}
           </span>
           {!formInputs.monthlyPayment && (
             <span className={styles.free}>2 months free</span>
