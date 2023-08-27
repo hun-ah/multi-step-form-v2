@@ -7,29 +7,32 @@ const TogglePlan = () => {
 
   return (
     <div className={styles.container}>
-      <span
+      <label
         className={
           formInputs.monthlyPayment ? `${styles.deselected}` : undefined
         }
+        htmlFor='monthlyPayment'
       >
         Yearly
-      </span>
+      </label>
       <label className={styles.switch}>
         <input
           type='checkbox'
           name='monthlyPayment'
+          id='monthlyPayment'
           checked={formInputs.monthlyPayment}
           onChange={handleInputChange}
         />
         <span className={`${styles.slider} ${styles.round}`}></span>
       </label>
-      <span
+      <label
         className={
           !formInputs.monthlyPayment ? `${styles.deselected}` : undefined
         }
+        htmlFor='monthlyPayment'
       >
         Monthly
-      </span>
+      </label>
     </div>
   );
 };
