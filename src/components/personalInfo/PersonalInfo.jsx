@@ -1,6 +1,6 @@
 import OptionLayout from '../optionLayout/OptionLayout';
 
-const PersonalInfo = () => {
+const PersonalInfo = ({ errMsg, setErrMsg }) => {
   const componentName = 'personal info';
 
   const heading = 'Personal info';
@@ -38,6 +38,8 @@ const PersonalInfo = () => {
       subheading={subheading}
       inputs={inputs}
       component={componentName}
+      errMsg={errMsg}
+      setErrMsg={setErrMsg}
     />
   );
 };
