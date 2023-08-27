@@ -5,20 +5,44 @@ import AddOns from '../addOns/AddOns.jsx';
 import FinishingUp from '../finishingUp/FinishingUp.jsx';
 import ThankYou from '../thankYou/ThankYou.jsx';
 import Button from '../button/Button';
-import { useContext } from 'react';
+import { useState, useContext } from 'react';
 import { InputContext } from '../../contexts/InputContext';
 
 const Form = ({ index, setIndex }) => {
   const { formInputs } = useContext(InputContext);
+  const [errMsg, setErrMsg] = useState({});
 
   const nextStep = () => {
-    setIndex((prevIndex) => {
-      if (prevIndex === 5) {
-        return prevIndex;
-      } else {
-        return prevIndex + 1;
-      }
-    });
+    const newErrors = {};
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+    if (!emailRegex.test(formInputs.emailAddress)) {
+      newErrors.emailAddress = 'Please enter a valid email address';
+      setErrMsg(newErrors);
+    }
+
+    if (!formInputs.name) {
+      newErrors.name = 'This field is required';
+      setErrMsg(newErrors);
+    }
+    if (!formInputs.emailAddress) {
+      newErrors.emailAddress = 'This field is required';
+      setErrMsg(newErrors);
+    }
+    if (!formInputs.phoneNumber) {
+      newErrors.phoneNumber = 'This field is required';
+      setErrMsg(newErrors);
+    }
+
+    if (Object.keys(newErrors).length === 0) {
+      setIndex((prevIndex) => {
+        if (prevIndex === 5) {
+          return prevIndex;
+        } else {
+          return prevIndex + 1;
+        }
+      });
+    }
   };
 
   const prevStep = () => {
@@ -34,7 +58,7 @@ const Form = ({ index, setIndex }) => {
   return (
     <div className={styles.container}>
       <form className={styles.form}>
-        {index == 1 && <PersonalInfo />}
+        {index == 1 && <PersonalInfo errMsg={errMsg} setErrMsg={setErrMsg} />}
         {index == 2 && <SelectPlan />}
         {index == 3 && <AddOns />}
         {index == 4 && <FinishingUp />}
