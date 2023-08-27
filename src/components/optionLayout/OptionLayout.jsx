@@ -5,7 +5,14 @@ import TextInput from '../inputs/textInput/TextInput';
 import RadioInput from '../inputs/radioInput/RadioInput';
 import CheckInput from '../inputs/checkinput/CheckInput';
 
-const OptionLayout = ({ heading, subheading, inputs, component }) => {
+const OptionLayout = ({
+  heading,
+  subheading,
+  inputs,
+  component,
+  errMsg,
+  setErrMsg,
+}) => {
   let inputContainerStyle;
   if (component == 'personal info') {
     inputContainerStyle = `${styles.personalInfoContainer}`;
@@ -27,6 +34,8 @@ const OptionLayout = ({ heading, subheading, inputs, component }) => {
         placeholder={input.placeholder}
         id={input.id}
         name={input.name}
+        errMsg={input.type == 'text' && errMsg[input.name]}
+        setErrMsg={setErrMsg}
       />
     ));
 
