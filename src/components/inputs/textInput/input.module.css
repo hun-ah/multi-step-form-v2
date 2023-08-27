@@ -9,6 +9,12 @@
   font-size: 14px;
 }
 
+.labelContainer {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 500;
+}
+
 .input {
   border: 1px solid var(--light-gray);
   border-radius: 10px;
@@ -34,4 +40,17 @@ input:-webkit-autofill:focus {
   box-shadow: 0 0 0px 1000px #ffffff inset !important;
   -webkit-box-shadow: 0 0 0px 1000px #ffffff inset !important;
   -webkit-text-fill-color: var(--marine-blue) !important;
+}
+
+.error {
+  border: 1px solid var(--strawberry);
+}
+
+.errorMsg {
+  color: var(--strawberry);
+  font-size: 14px;
+}
+
+.error:focus {
+  border: 1px solid var(--strawberry);
 }
