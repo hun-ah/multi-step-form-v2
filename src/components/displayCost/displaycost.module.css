@@ -41,6 +41,11 @@
 .plan > div > span:last-child {
   text-decoration: underline;
   cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.plan > div > span:last-child:hover {
+  color: var(--purple-blue);
 }
 
 .plan > span {
