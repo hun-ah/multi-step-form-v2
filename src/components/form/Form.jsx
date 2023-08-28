@@ -55,7 +55,7 @@ const Form = ({ index, setIndex }) => {
 
     try {
       const res = await fetch(
-        'https://multi-step-form-api.vercel.app/submitUserInfo',
+        'https://multi-step-form-api.cyclic.app/submitUserInfo',
         {
           method: 'POST',
           headers: {
