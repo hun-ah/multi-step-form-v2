@@ -52,14 +52,17 @@ const Form = ({ index, setIndex }) => {
   const submitForm = async () => {
     setIndex((prevIndex) => prevIndex + 1);
     const newClient = { ...formInputs };
+    const headers = {
+      'Content-Type': 'application/json',
+      'Access-Control-Allow-Origin': '*',
+      'Access-Control-Allow-Methods': 'POST,PATCH,OPTIONS',
+    };
     try {
       const res = await fetch(
         'https://multi-step-form-api.vercel.app/submitUserInfo',
         {
           method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
+          headers: headers,
           body: JSON.stringify(newClient),
         }
       );
