@@ -1,6 +1,6 @@
 # Multi-step Form
 
-This multi-input form is made with React, it is a rebuild of [my first React project](https://multi-step-form-react-hwm.netlify.app/).
+This multi-input form is made with React and is a rebuild of [my first React project](https://multi-step-form-react-hwm.netlify.app/).
 
 **You can check it out here:** [Multi-step Form](https://multi-step-form-reactv2-hwm.netlify.app/)
 **Backend available here:** [Multi-step form api](https://github.com/hun-ah/multi-step-form-api)
