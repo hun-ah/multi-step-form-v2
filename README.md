@@ -10,6 +10,7 @@ https://github.com/hun-ah/multi-step-form-v2/assets/103898493/f3b48f90-2758-4862
 
 ## How It's Made/Works:
 **Built with: Vite, React, Node.js, Express and MongoDB**
+
 This project is a rebuild of my first React application. The intention was to create drier, more modular code that is easier to read and interact with. The first time I built
 this project, I was happy to simply have built something using React. Looking back on how disorganized and repetitive the original code was, I knew I needed to build something using
 my current skills and standards.
