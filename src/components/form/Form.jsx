@@ -49,10 +49,24 @@ const Form = ({ index, setIndex }) => {
     setIndex((prevIndex) => prevIndex - 1);
   };
 
-  const submitForm = () => {
+  const submitForm = async () => {
     setIndex((prevIndex) => prevIndex + 1);
     const newClient = { ...formInputs };
-    console.log(newClient);
+    try {
+      const res = await fetch(
+        'https://multi-step-form-api.vercel.app/submitUserInfo',
+        {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(newClient),
+        }
+      );
+      res.status === 201 && console.log('user created');
+    } catch (err) {
+      console.log(err);
+    }
   };
 
   return (
